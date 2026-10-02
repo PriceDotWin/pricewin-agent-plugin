@@ -72,6 +72,29 @@ mkdir -p ~/.agents/skills && cp -r /tmp/pricewin/skills/pricewin-travel-search ~
 
 `opencode mcp list` should show `pricewin` as connected.
 
+### Cline
+
+Add the server to Cline's MCP settings (`cline_mcp_settings.json`; in the CLI,
+`~/.cline/data/settings/cline_mcp_settings.json`). Set `type` explicitly,
+because Cline otherwise assumes the legacy SSE transport:
+
+```json
+{
+  "mcpServers": {
+    "pricewin": {
+      "type": "streamableHttp",
+      "url": "https://mcp.price.win/mcp",
+      "disabled": false,
+      "autoApprove": []
+    }
+  }
+}
+```
+
+No API key or login is needed. Optionally copy
+`skills/pricewin-travel-search` into `~/.cline/skills/`, which Cline loads as a
+skill. Tested with the Cline CLI 3.0.68.
+
 ### Pi and DeepSeek Harness
 
 Both need their own package format, so they have their own repositories with
