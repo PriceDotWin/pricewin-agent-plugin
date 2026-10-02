@@ -1,7 +1,7 @@
 {
   "name": "pricewin",
   "displayName": "PriceWin",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Live hotel and flight prices compared across Booking.com, Agoda, Trip.com and Traveloka, in USD, through the PriceWin MCP server. Includes the pricewin-travel-search skill. Can send a booking request to a direct-listed hotel (nothing is charged; the guest pays at the property).",
   "author": {
     "name": "PriceWin",
@@ -9,6 +9,7 @@
     "url": "https://www.price.win/"
   },
   "homepage": "https://www.price.win/",
+  "privacyPolicyUrl": "https://www.price.win/en/privacy-policy",
   "repository": "https://github.com/PriceDotWin/pricewin-agent-plugin",
   "license": "MIT",
   "keywords": [
@@ -18,5 +19,6 @@
     "price-comparison",
     "booking",
     "mcp"
-  ]
+  ],
+  "icon": ".claude-plugin/icon.png"
 }
