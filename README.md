@@ -36,8 +36,7 @@ reach outside services, and their annotations say so (`openWorldHint: true`).
 ### Antigravity
 
 ```bash
-git clone https://github.com/PriceDotWin/pricewin-agent-plugin
-agy plugin install ./pricewin-agent-plugin
+agy plugin install https://github.com/PriceDotWin/pricewin-agent-plugin
 ```
 
 ### Gemini CLI
