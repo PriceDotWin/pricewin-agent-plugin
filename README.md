@@ -12,7 +12,8 @@ Traveloka, in USD, from inside your coding agent. One package bundles:
 The same files load in Claude Code, Codex CLI and ZCode: all three read
 `.claude-plugin/plugin.json`, the plugin-root `.mcp.json` and `skills/`.
 Antigravity reads the root `plugin.json`, `mcp_config.json` and the same
-`skills/`; Gemini CLI reads `gemini-extension.json` and `skills/`.
+`skills/`; Gemini CLI reads `gemini-extension.json` and `skills/`. OpenCode
+takes the server from `opencode.json` and the skill from `~/.agents/skills`.
 
 ## Install
 
@@ -44,6 +45,32 @@ agy plugin install https://github.com/PriceDotWin/pricewin-agent-plugin
 ```bash
 gemini extensions install https://github.com/PriceDotWin/pricewin-agent-plugin
 ```
+
+### OpenCode
+
+OpenCode needs no plugin: add the server to `opencode.json` (in the project, or
+`~/.config/opencode/opencode.json` for every project):
+
+```json
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "pricewin": {
+      "type": "remote",
+      "url": "https://mcp.price.win/mcp"
+    }
+  }
+}
+```
+
+and, optionally, the skill, which OpenCode loads from `~/.agents/skills`:
+
+```bash
+git clone --depth 1 https://github.com/PriceDotWin/pricewin-agent-plugin /tmp/pricewin
+mkdir -p ~/.agents/skills && cp -r /tmp/pricewin/skills/pricewin-travel-search ~/.agents/skills/
+```
+
+`opencode mcp list` should show `pricewin` as connected.
 
 ### ZCode
 
