@@ -57,11 +57,28 @@ email to the hotel, which confirms the request; no room is held and the guest
 pays at the property. Cancelling needs a single-use token that is emailed to the
 address on the booking, so nothing is cancelled without the guest's own inbox.
 
-## Data
+## What the plugin sends, and where
 
-Prices and links come from live searches of Booking.com, Agoda, Trip.com and
-Traveloka, and from OpenTravel partner hotels. They are time-sensitive; book
-through the link a result carries. No account is needed and no payment data is
+The plugin contains no code. It points the agent at one remote MCP server,
+`https://mcp.price.win/mcp`, and a skill that tells the agent how to use it.
+
+- **To `mcp.price.win`**: the arguments of each tool call, which are trip details
+  (city, dates, party size, hotel name, price range, airports, cabin), a short
+  excerpt of the request used only to pick the reply language, and, for a
+  booking request, the guest's name, phone number and email.
+- **Onward from PriceWin's server**: only to PriceWin's own backend and to
+  OpenTravel's API (`api.travelopen.ai`), which the PriceWin developer also owns.
+  A booking request's name, phone and email go to the partner hotel through
+  OpenTravel, so the hotel can confirm it.
+- **Usage analytics**: PriceWin records trip parameters only (city, dates,
+  party size, hotel name, currency), never a guest's name, email, phone,
+  confirmation code or cancel token.
+- **Where prices come from**: PriceWin's backend reads Booking.com, Agoda,
+  Traveloka, Trip.com and Google Flights from their public pages at search time.
+  PriceWin has no partnership with those sites. Each result is labelled with its
+  source and links to it for booking. Prices are time-sensitive.
+
+No account is needed, nothing runs on your machine, and no payment data is
 ever requested. See the [privacy policy](https://www.price.win/en/privacy-policy)
 and [terms of service](https://www.price.win/en/terms-of-service).
 

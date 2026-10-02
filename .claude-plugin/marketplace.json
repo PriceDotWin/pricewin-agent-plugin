@@ -12,7 +12,7 @@
       "name": "pricewin",
       "source": "./",
       "description": "Live hotel and flight prices compared across Booking.com, Agoda, Trip.com and Traveloka, through the PriceWin MCP server.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "category": "travel",
       "homepage": "https://www.price.win/"
     }
