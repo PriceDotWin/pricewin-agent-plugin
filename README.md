@@ -72,6 +72,13 @@ mkdir -p ~/.agents/skills && cp -r /tmp/pricewin/skills/pricewin-travel-search ~
 
 `opencode mcp list` should show `pricewin` as connected.
 
+### Pi and DeepSeek Harness
+
+Both need their own package format, so they have their own repositories with
+the same server and skill:
+[pricewin-pi](https://github.com/PriceDotWin/pricewin-pi) and
+[pricewin-dsh](https://github.com/PriceDotWin/pricewin-dsh).
+
 ### ZCode
 
 ZCode reads this package format. A listing in the ZCode plugin marketplace is
