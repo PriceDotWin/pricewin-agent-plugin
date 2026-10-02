@@ -1,0 +1,20 @@
+{
+  "name": "pricewin",
+  "owner": {
+    "name": "PriceWin",
+    "email": "support@price.win"
+  },
+  "metadata": {
+    "description": "PriceWin plugins for coding agents: live hotel and flight price comparison."
+  },
+  "plugins": [
+    {
+      "name": "pricewin",
+      "source": "./",
+      "description": "Live hotel and flight prices compared across Booking.com, Agoda, Trip.com and Traveloka, through the PriceWin MCP server.",
+      "version": "1.0.0",
+      "category": "travel",
+      "homepage": "https://www.price.win/"
+    }
+  ]
+}
