@@ -12,7 +12,8 @@ Traveloka, in USD, from inside your coding agent. One package bundles:
 The same files load in Claude Code, Codex CLI and ZCode: all three read
 `.claude-plugin/plugin.json`, the plugin-root `.mcp.json` and `skills/`.
 Antigravity reads the root `plugin.json`, `mcp_config.json` and the same
-`skills/`; Gemini CLI reads `gemini-extension.json` and `skills/`. OpenCode
+`skills/`; GitHub Copilot CLI reads that root `plugin.json` with `.mcp.json`
+and `skills/`; Gemini CLI reads `gemini-extension.json` and `skills/`. OpenCode
 takes the server from `opencode.json` and the skill from `~/.agents/skills`.
 
 ## Install
@@ -33,6 +34,14 @@ codex plugin add pricewin@pricewin
 
 Codex asks for approval before PriceWin calls: the search and booking tools
 reach outside services, and their annotations say so (`openWorldHint: true`).
+
+### GitHub Copilot CLI
+
+```bash
+copilot plugin install PriceDotWin/pricewin-agent-plugin
+```
+
+`copilot mcp list` should show `pricewin (http)` under plugin servers.
 
 ### Antigravity
 
