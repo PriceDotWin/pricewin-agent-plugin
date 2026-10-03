@@ -12,7 +12,7 @@ Traveloka, in USD, from inside your coding agent. One package bundles:
 The same files load in Claude Code, Codex CLI and ZCode: all three read
 `.claude-plugin/plugin.json`, the plugin-root `.mcp.json` and `skills/`.
 Antigravity reads the root `plugin.json`, `mcp_config.json` and the same
-`skills/`; GitHub Copilot CLI reads that root `plugin.json` with `.mcp.json`
+`skills/`; GitHub Copilot CLI reads `.plugin/plugin.json` with `.mcp.json`
 and `skills/`; Gemini CLI reads `gemini-extension.json` and `skills/`. OpenCode
 takes the server from `opencode.json` and the skill from `~/.agents/skills`.
 
