@@ -1,7 +1,7 @@
 {
   "mcpServers": {
     "pricewin": {
-      "serverUrl": "https://mcp.price.win/mcp"
+      "serverUrl": "https://mcp.price.win/mcp?src=agy"
     }
   }
 }

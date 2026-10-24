@@ -1,10 +1,10 @@
 {
   "name": "pricewin",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Live hotel and flight prices compared across Booking.com, Agoda, Trip.com and Traveloka, in USD, through the PriceWin MCP server, with the pricewin-travel-search skill.",
   "mcpServers": {
     "pricewin": {
-      "httpUrl": "https://mcp.price.win/mcp"
+      "httpUrl": "https://mcp.price.win/mcp?src=gemini-cli"
     }
   }
 }
